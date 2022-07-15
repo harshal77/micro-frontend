@@ -35,11 +35,18 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
+/container/build/Release
+/mfe1/build/Release
+/mfe2/build/Release
+
 
 # Dependency directories
-node_modules/
-jspm_packages/
+/container/node_modules/
+/container/jspm_packages/
+/mfe1/node_modules/
+/mfe1/jspm_packages/
+/mfe2/node_modules/
+/mfe2/jspm_packages/
 
 # TypeScript v1 declaration files
 typings/
