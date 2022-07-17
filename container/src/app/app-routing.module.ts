@@ -7,6 +7,16 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const routes: Routes = [
   { path: '', component: DashboardComponent, pathMatch: 'full'},
   {
+    path: 'mfe-1',
+    loadChildren: () =>
+      loadRemoteModule({
+        type: 'module',
+        remoteEntry: 'http://localhost:4201/remoteEntry.js',
+        exposedModule: './MF1'
+      })
+        .then((m: any) => m.AppModule)
+  },
+  {
     path: 'mfe-2-student',
     loadChildren: () =>
       loadRemoteModule({
